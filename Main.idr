@@ -2,9 +2,15 @@ module Main
 
 import Editline
 
-main : IO ()
-main = do
+loop : IO ()
+loop = do
   str <- readline "> "
   case str of
        Nothing => putStrLn "Exit!"
-       Just s => putStrLn ("You typed" ++ s)
+       Just "" => loop
+       Just s  => do
+         putStrLn ("You typed" ++ s)
+         loop
+
+main : IO ()
+main = loop
