@@ -9,8 +9,17 @@ loop = do
        Nothing => putStrLn "Exit!"
        Just "" => loop
        Just s  => do
-         putStrLn ("You typed" ++ s)
+         putStrLn ("You typed: " ++ s)
          loop
 
 main : IO ()
-main = loop
+main = do
+  initReadline
+  addDictEntry "foo"
+  addDictEntry "baz"
+  addDictEntry "encore"
+  addDictEntry "pasta"
+  addDictEntry "crocodile"
+  addDictEntry "telephone"
+  addDictEntry "telegraph"
+  loop
