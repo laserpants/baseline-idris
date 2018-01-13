@@ -1,4 +1,10 @@
 module Main
 
+import Editline
+
 main : IO ()
-main = putStrLn "X"
+main = do
+  str <- readline "> "
+  case str of
+       Nothing => putStrLn "Exit!"
+       Just s => putStrLn ("You typed" ++ s)

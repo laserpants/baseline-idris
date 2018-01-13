@@ -1,7 +1,6 @@
 module Editline
 
 %include C "editline_idris.h"
-%include C "editline.h"
 %lib     C "editline"
 %link    C "editline_idris.o"
 
