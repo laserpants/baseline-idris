@@ -1,0 +1,4 @@
+package editline-idris
+
+modules = Main
+        , Editline
