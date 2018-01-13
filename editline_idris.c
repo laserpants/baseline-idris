@@ -1,6 +1,11 @@
-#include "editline_idris.h"
-#include <editline.h>
+#define _BSD_SOURCE
+
+#include <stdio.h>
+#include <editline.h>    /* Include after stdio.h */
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include "editline_idris.h"
 
 char *
 readline_gets (char *prompt)

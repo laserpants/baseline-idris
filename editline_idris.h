@@ -4,4 +4,3 @@
 char *readline_gets (char *prompt);
 
 #endif
-
