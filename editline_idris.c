@@ -47,21 +47,20 @@ list_possible (char *token, char ***av)
 {
     struct entry *current = dict;
     size_t len = strlen (token);
-    char **results = NULL;
     int count = 0;
+
+    *av = NULL;
 
     while (NULL != current)
     {
         if (0 == strncmp (current->str, token, len))
         {
             ++count;
-            results = realloc (results, count * sizeof (char *));
-            *(results + count - 1) = strdup (current->str);
+            *av = realloc (*av, count * sizeof (char *));
+            *(*av + count - 1) = strdup (current->str);
         }
         current = current->next;
     }
-
-    *av = results;
 
     return count;
 }
