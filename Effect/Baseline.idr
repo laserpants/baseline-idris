@@ -18,11 +18,11 @@ Handler Baseline IO where
 BASELINE : EFFECT
 BASELINE = MkEff () Baseline
 
-baseline : String -> Eff (Maybe String) [BASELINE]
+baseline : (prompt : String) -> Eff (Maybe String) [BASELINE]
 baseline prompt = call (Read prompt)
 
-addDictEntry : String -> Eff () [BASELINE]
+addDictEntry : (entry : String) -> Eff () [BASELINE]
 addDictEntry entry = call (AddDictEntry entry)
 
-addDictEntries : Traversable t => t String -> Eff () [BASELINE]
+addDictEntries : Traversable t => (entries : t String) -> Eff () [BASELINE]
 addDictEntries entries = call (AddDictEntries entries)
