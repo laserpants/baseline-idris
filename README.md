@@ -95,7 +95,7 @@ Run the readline prompt and save input to history.
 Add an entry to tab completion dictionary.
 
 #### `addDictEntries : Foldable t => t String -> IO ()` (`import Baseline`)
-#### `addDictEntries : List String -> Eff () [BASELINE]` (`import Effect.Baseline`)
+#### `addDictEntries : Foldable t => t String -> Eff () [BASELINE]` (`import Effect.Baseline`)
 
 Add multiple entries to tab completion dictionary.
 
