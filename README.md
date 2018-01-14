@@ -86,8 +86,8 @@ main = run program
 
 ## API
 
-#### Baseline.`baseline : String -> IO (Maybe String)`
-#### `Effect.Baseline.baseline : String -> Eff (Maybe String) [BASELINE]`
+#### `baseline : String -> IO (Maybe String)` (`import Baseline`)
+#### `baseline : String -> Eff (Maybe String) [BASELINE]` (`import Effect.Baseline`)
 
 Run the readline prompt and save input to history.
 
