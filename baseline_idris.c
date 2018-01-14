@@ -68,15 +68,12 @@ list_possible (char *token, char ***av)
 }
 
 char *
-readline_gets (char *prompt)
+bl_readline (char *prompt)
 {
     static char *input = NULL;
 
     if (false == init_done)
-    {
-        readline_init ();
-        init_done = true;
-    }
+        bl_init ();
 
     if (NULL != input)
         free (input);
@@ -86,18 +83,32 @@ readline_gets (char *prompt)
     return input;
 }
 
-void 
-readline_init ()
+void
+bl_init ()
 {
     rl_set_complete_func (&complete);
     rl_set_list_possib_func (&list_possible);
+
+    init_done = true;
 }
 
 void
-add_dict_entry (char *str)
+bl_add_dict_entry (char *str)
 {
     struct entry *entry = malloc (sizeof (struct entry));
     entry->str = strdup (str);
     entry->next = dict;
     dict = entry;
+}
+
+void
+bl_read_history (char *filename)
+{
+    read_history (filename);
+}
+
+void
+bl_write_history (char *filename)
+{
+    write_history (filename);
 }
