@@ -6,6 +6,8 @@ This project provides FFI bindings for the [editline](https://github.com/troglob
 
 ### Vanilla `IO` monad
 
+`examples/Basic.idr`:
+
 ```idris
 module Main
 
@@ -25,17 +27,20 @@ main : IO ()
 main = do
   addDictEntries
     [ "multidiscipline"
+    , "multivitamin"
+    , "multiplex"
     , "monocrystalline"
     , "streamline"
     , "waterline"
     , "skyline"
     , "online"
-    , "byline"
-    ]
+    , "byline" ]
   loop
 ```
 
 ### Effect
+
+`examples/Effect.idr`:
 
 ```idris
 module Main
