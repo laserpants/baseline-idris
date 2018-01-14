@@ -99,7 +99,7 @@ main = run program
 
 ### History
 
-See `examples/History.idr` or above snippet :point_up_2:.
+See `examples/History.idr` or above snippet. :point_up_2:
 
 ## API
 
