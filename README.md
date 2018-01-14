@@ -1,10 +1,24 @@
 # baseline-idris
 
-This project provides FFI bindings for the [editline](https://github.com/troglobit/editline) library, to implement basic readline functionality in [Idris](https://github.com/idris-lang). Perhaps the name *editline-idris* would be suitable if the API was a bit more complete. :stuck_out_tongue:
+This project provides FFI bindings for the 
+[editline](https://github.com/troglobit/editline) library, to implement basic 
+readline functionality in [Idris](https://github.com/idris-lang). Perhaps the 
+name *editline-idris* would be suitable if the API was a bit more complete. 
+:stuck_out_tongue:
 
 ## Preliminaries
 
-To use this library, first [build and install editline](https://github.com/troglobit/editline#build--install). Then run <kbd>make</kbd> in this project's root directory to compile the C bindings.
+To use this library, first [build and install editline](https://github.com/troglobit/editline#build--install). 
+Then run <kbd>make</kbd> in this project's root directory to compile the C 
+bindings.
+
+## Install
+
+Install the package using:
+
+```
+idris --install baseline-idris.ipkg
+```
 
 ## Usage
 

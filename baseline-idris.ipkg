@@ -1,5 +1,5 @@
-package baseline-idris
+package baseline
 
-modules = Main, Baseline, Effect.Baseline
+modules = Baseline, Effect.Baseline
 
 opts = "-p effects"
