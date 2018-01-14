@@ -70,6 +70,7 @@ import Baseline
 
 program : Eff () [BASELINE, STDIO]
 program = do
+  readHistory ".history"
   addDictEntries
     [ "multidiscipline"
     , "multivitamin"
@@ -81,18 +82,24 @@ program = do
     , "online"
     , "byline" ]
   loop
+  writeHistory ".history"
+  putStrLn "Exit!"
 where
   loop : Eff () [BASELINE, STDIO]
   loop = case !(baseline "$> ") of
-              Nothing => putStrLn "Exit!"
               Just "" => loop
               Just s  => do
                 putStrLn ("You typed: " ++ s)
                 loop
+              otherwise => pure ()
 
 main : IO ()
 main = run program
 ```
+
+### History
+
+See `examples/History.idr` or above snippet.
 
 ## API
 
