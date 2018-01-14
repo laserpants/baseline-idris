@@ -1,10 +1,10 @@
 module Main
 
-import Editline
+import Baseline
 
 loop : IO ()
 loop = do
-  str <- readline "> "
+  str <- baseline "$> "
   case str of
        Nothing => putStrLn "Exit!"
        Just "" => loop

@@ -1,9 +1,9 @@
 CC = gcc
 CFLAGS = `idris --include`
 
-editline_idris.o: editline_idris.c editline_idris.h
+baseline_idris.o: baseline_idris.c baseline_idris.h
 
 clean: .PHONY
-	rm editline_idris.o
+	rm baseline_idris.o
 
 .PHONY:
