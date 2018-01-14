@@ -86,33 +86,21 @@ main = run program
 
 ## API
 
-`import Baseline`
+`import `
+`import `
 
-#### `baseline : String -> IO (Maybe String)`
-
-Run the readline prompt and save input to history.
-
-#### `addDictEntry : String -> IO ()`
-
-Add an entry to tab completion dictionary.
-
-#### `addDictEntries : Foldable t => t String -> IO ()`
-
-Add multiple entries to tab completion dictionary.
-
-### Effect
-
-`import Effect.Baseline`
-
-#### `baseline : String -> Eff (Maybe String) [BASELINE]`
+#### `Baseline.baseline : String -> IO (Maybe String)`
+#### `Effect.Baseline.baseline : String -> Eff (Maybe String) [BASELINE]`
 
 Run the readline prompt and save input to history.
 
-#### `addDictEntry : String -> Eff () [BASELINE]`
+#### `Baseline.addDictEntry : String -> IO ()`
+#### `Effect.Baseline.addDictEntry : String -> Eff () [BASELINE]`
 
 Add an entry to tab completion dictionary.
 
-#### `addDictEntries : List String -> Eff () [BASELINE]`
+#### `Baseline.addDictEntries : Foldable t => t String -> IO ()`
+#### `Effect.Baseline.addDictEntries : List String -> Eff () [BASELINE]`
 
 Add multiple entries to tab completion dictionary.
 
