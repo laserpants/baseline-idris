@@ -96,20 +96,22 @@ main = run program
 
 ## API
 
-#### `baseline : (prompt : String) -> IO (Maybe String)` (`import Baseline`)
-#### `baseline : (prompt : String) -> Eff (Maybe String) [BASELINE]` (`import Effect.Baseline`)
+#### `baseline : (prompt : String) -> IO (Maybe String)` 
+#### `baseline : (prompt : String) -> Eff (Maybe String) [BASELINE] *`
 
 Run the readline prompt and save input to history.
 
-#### `addDictEntry : (entry : String) -> IO ()` (`import Baseline`)
-#### `addDictEntry : (entry : String) -> Eff () [BASELINE]` (`import Effect.Baseline`)
+#### `addDictEntry : (entry : String) -> IO ()` 
+#### `addDictEntry : (entry : String) -> Eff () [BASELINE] *`
 
 Add an entry to tab completion dictionary.
 
-#### `addDictEntries : Foldable t => (entries : t String) -> IO ()` (`import Baseline`)
-#### `addDictEntries : Traversable t => (entries : t String) -> Eff () [BASELINE]` (`import Effect.Baseline`)
+#### `addDictEntries : Foldable t => (entries : t String) -> IO ()` 
+#### `addDictEntries : Traversable t => (entries : t String) -> Eff () [BASELINE] *` 
 
 Add multiple entries to tab completion dictionary.
+
+`*`) Use `import Effect.Baseline`.
 
 ## Roadmap
 
