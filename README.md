@@ -12,7 +12,7 @@ To use this library, first [build and install editline](https://github.com/trogl
 Then run <kbd>make</kbd> in this project's root directory to compile the C 
 bindings.
 
-## Install
+## Installing
 
 Install the package using:
 
