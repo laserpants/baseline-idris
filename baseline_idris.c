@@ -21,7 +21,7 @@ static char *
 complete (char *token, int *match)
 {
     struct entry *current = dict;
-    size_t len = strlen (token);
+    const size_t len = strlen (token);
     char *result = NULL;
     int count = 0;
 
@@ -48,7 +48,7 @@ static int
 list_possible (char *token, char ***av)
 {
     struct entry *current = dict;
-    size_t len = strlen (token);
+    const size_t len = strlen (token);
     int count = 0;
 
     *av = NULL;
