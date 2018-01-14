@@ -84,9 +84,15 @@ main = run program
 
 #### `baseline : String -> IO (Maybe String)`
 
+Run the readline prompt and save input to history.
+
 #### `addDictEntry : String -> IO ()`
 
+Add an entry to tab completion dictionary.
+
 #### `addDictEntries : Foldable t => t String -> IO ()`
+
+Add multiple entries to tab completion dictionary.
 
 ### Effect
 
@@ -94,8 +100,18 @@ main = run program
 
 #### `baseline : String -> Eff (Maybe String) [BASELINE]`
 
+Run the readline prompt and save input to history.
+
 #### `addDictEntry : String -> Eff () [BASELINE]`
+
+Add an entry to tab completion dictionary.
 
 #### `addDictEntries : List String -> Eff () [BASELINE]`
 
+Add multiple entries to tab completion dictionary.
+
 ## Roadmap
+
+- [ ] Ability to take callback for custom tab completion (requires FFI support)
+- [ ] Implement more of editline's API
+- [ ] Readline-like reverse search
