@@ -4,6 +4,8 @@ This project provides FFI bindings for the [editline](https://github.com/troglob
 
 ## Usage
 
+### Vanilla `IO` monad
+
 ```idris
 module Main
 
@@ -32,6 +34,8 @@ main = do
     ]
   loop
 ```
+
+### Effect
 
 ```idris
 module Main
