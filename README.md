@@ -97,7 +97,7 @@ main : IO ()
 main = run program
 ```
 
-### History
+### Save and restore history
 
 See `examples/History.idr` or above snippet. :point_up_2:
 
