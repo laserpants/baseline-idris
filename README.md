@@ -11,3 +11,5 @@ This project provides FFI bindings for the [editline](https://github.com/troglob
 #### `addDictEntry : String -> IO ()`
 
 #### `addDictEntries : Foldable t => t String -> IO ()`
+
+## Roadmap
