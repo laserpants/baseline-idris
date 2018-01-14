@@ -119,12 +119,12 @@ Add an entry to tab completion dictionary.
 Add multiple entries to tab completion dictionary.
 
 #### `readHistory : (filename : String) -> IO ()`
-#### `readHistory : String -> Eff () [BASELINE] *`
+#### `readHistory : (filename : String) -> Eff () [BASELINE] *`
 
 Recover saved history from file.
 
 #### `writeHistory : (filename : String) -> IO ()`
-#### `writeHistory : String -> Eff () [BASELINE] *`
+#### `writeHistory : (filename : String) -> Eff () [BASELINE] *`
 
 Save history to file.
 

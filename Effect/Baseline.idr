@@ -35,9 +35,9 @@ addDictEntries : Traversable t => (entries : t String) -> Eff () [BASELINE]
 addDictEntries entries = call (AddDictEntries entries)
 
 ||| Recover saved history from file.
-readHistory : String -> Eff () [BASELINE]
+readHistory : (filename : String) -> Eff () [BASELINE]
 readHistory file = call (ReadHistory file)
 
 ||| Save history to file.
-writeHistory : String -> Eff () [BASELINE]
+writeHistory : (filename : String) -> Eff () [BASELINE]
 writeHistory file = call (WriteHistory file)
