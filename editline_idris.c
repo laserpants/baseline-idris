@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <editline.h>    /* Include after stdio.h */
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 #include <unistd.h>
 #include "editline_idris.h"
@@ -13,7 +14,8 @@ struct entry
     struct entry *next;
 };
 
-static struct entry *dict = NULL;
+struct entry *dict = NULL;
+bool init_done = false;
 
 static char *
 complete (char *token, int *match)
@@ -69,6 +71,12 @@ char *
 readline_gets (char *prompt)
 {
     static char *input = NULL;
+
+    if (false == init_done)
+    {
+        readline_init ();
+        init_done = true;
+    }
 
     if (NULL != input)
         free (input);

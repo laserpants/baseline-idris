@@ -14,12 +14,14 @@ loop = do
 
 main : IO ()
 main = do
-  initReadline
-  addDictEntry "foo"
-  addDictEntry "baz"
-  addDictEntry "encore"
-  addDictEntry "pasta"
-  addDictEntry "crocodile"
-  addDictEntry "telephone"
-  addDictEntry "telegraph"
+  addDictEntries
+    [ "foo"
+    , "baz"
+    , "encore"
+    , "pasta"
+    , "crocodile"
+    , "telephone"
+    , "telegraph"
+    , "telegram"
+    ]
   loop

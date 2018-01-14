@@ -15,9 +15,9 @@ readline prompt = do
   pure (toMaybe (not null) text)
 
 export
-initReadline : IO ()
-initReadline = foreign FFI_C "readline_init" (IO ())
-
-export
 addDictEntry : String -> IO ()
 addDictEntry = foreign FFI_C "add_dict_entry" (String -> IO ())
+
+export
+addDictEntries : Foldable t => t String -> IO ()
+addDictEntries es = for_ es addDictEntry
