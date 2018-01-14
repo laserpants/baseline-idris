@@ -22,17 +22,22 @@ Handler Baseline IO where
 BASELINE : EFFECT
 BASELINE = MkEff () Baseline
 
+||| Run the readline prompt and save input to history.
 baseline : (prompt : String) -> Eff (Maybe String) [BASELINE]
 baseline prompt = call (Readline prompt)
 
+||| Add an entry to tab completion dictionary.
 addDictEntry : (entry : String) -> Eff () [BASELINE]
 addDictEntry entry = call (AddDictEntry entry)
 
+||| Add multiple entries to tab completion dictionary.
 addDictEntries : Traversable t => (entries : t String) -> Eff () [BASELINE]
 addDictEntries entries = call (AddDictEntries entries)
 
+||| Recover saved history from file.
 readHistory : String -> Eff () [BASELINE]
 readHistory file = call (ReadHistory file)
 
+||| Save history to file.
 writeHistory : String -> Eff () [BASELINE]
 writeHistory file = call (WriteHistory file)
