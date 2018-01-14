@@ -24,5 +24,5 @@ baseline prompt = call (Read prompt)
 addDictEntry : String -> Eff () [BASELINE]
 addDictEntry entry = call (AddDictEntry entry)
 
-addDictEntries : List String -> Eff () [BASELINE]
+addDictEntries : Foldable t => t String -> Eff () [BASELINE]
 addDictEntries entries = call (AddDictEntries entries)
