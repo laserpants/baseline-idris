@@ -9,8 +9,6 @@ name *editline-idris* would be suitable if the API was a bit more complete.
 ## Preliminaries
 
 To use this library, first [build and install Editline](https://github.com/troglobit/editline#build--install). 
-Then run <kbd>make</kbd> in this project's root directory to compile the C 
-bindings.
 
 ## Installing
 

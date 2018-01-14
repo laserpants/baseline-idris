@@ -2,6 +2,7 @@ module Baseline
 
 %include C "baseline_idris.h"
 %lib     C "editline"
+%link    C "baseline_idris.o"
 
 readline : String -> IO String
 readline = foreign FFI_C "bl_readline" (String -> IO String)

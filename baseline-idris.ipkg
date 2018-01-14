@@ -2,4 +2,8 @@ package baseline
 
 modules = Baseline, Effect.Baseline
 
+makefile = Makefile
+
 opts = "-p effects"
+
+objs = baseline_idris.o, baseline_idris.h
