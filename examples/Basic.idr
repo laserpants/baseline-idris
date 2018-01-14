@@ -16,11 +16,12 @@ main : IO ()
 main = do
   addDictEntries
     [ "multidiscipline"
+    , "multivitamin"
+    , "multiplex"
     , "monocrystalline"
     , "streamline"
     , "waterline"
     , "skyline"
     , "online"
-    , "byline"
-    ]
+    , "byline" ]
   loop
