@@ -86,6 +86,9 @@ bl_readline (char *prompt)
 void
 bl_init ()
 {
+    if (true == init_done)
+        return;
+
     rl_set_complete_func (&complete);
     rl_set_list_possib_func (&list_possible);
 
