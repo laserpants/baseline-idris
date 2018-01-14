@@ -1,8 +1,10 @@
 #ifndef EDITLINE_IDRIS_H
 #define EDITLINE_IDRIS_H
 
-char *readline_gets (char *prompt);
-void readline_init ();
-void add_dict_entry (char *str);
+char *bl_readline (char *prompt);
+void  bl_init ();
+void  bl_add_dict_entry (char *str);
+void  bl_read_history (char *filename);
+void  bl_write_history (char *filename);
 
 #endif
