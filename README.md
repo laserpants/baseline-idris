@@ -113,7 +113,7 @@ Add multiple entries to tab completion dictionary.
 
 ---
 
-`*`) Use `import Effect.Baseline`.
+*) Use `import Effect.Baseline`.
 
 ## Roadmap
 
