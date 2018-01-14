@@ -69,14 +69,12 @@ program = do
   loop
 where
   loop : Eff () [BASELINE, STDIO]
-  loop = do
-    str <- baseline "$> "
-    case str of
-         Nothing => putStrLn "Exit!"
-         Just "" => loop
-         Just s  => do
-           putStrLn ("You typed: " ++ s)
-           loop
+  loop = case !(baseline "$> ") of
+              Nothing => putStrLn "Exit!"
+              Just "" => loop
+              Just s  => do
+                putStrLn ("You typed: " ++ s)
+                loop
 
 main : IO ()
 main = run program
@@ -95,7 +93,7 @@ Run the readline prompt and save input to history.
 Add an entry to tab completion dictionary.
 
 #### `addDictEntries : Foldable t => t String -> IO ()` (`import Baseline`)
-#### `addDictEntries : Foldable t => t String -> Eff () [BASELINE]` (`import Effect.Baseline`)
+#### `addDictEntries : Traversable t => t String -> Eff () [BASELINE]` (`import Effect.Baseline`)
 
 Add multiple entries to tab completion dictionary.
 

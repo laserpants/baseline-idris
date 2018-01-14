@@ -8,7 +8,7 @@ import Baseline
 data Baseline : Effect where
   Read : String -> sig Baseline (Maybe String)
   AddDictEntry : String -> sig Baseline ()
-  AddDictEntries : List String -> sig Baseline ()
+  AddDictEntries : Traversable t => t String -> sig Baseline ()
 
 Handler Baseline IO where
   handle () (Read p)            k = do x <- baseline p; k x ()
@@ -24,5 +24,5 @@ baseline prompt = call (Read prompt)
 addDictEntry : String -> Eff () [BASELINE]
 addDictEntry entry = call (AddDictEntry entry)
 
-addDictEntries : Foldable t => t String -> Eff () [BASELINE]
+addDictEntries : Traversable t => t String -> Eff () [BASELINE]
 addDictEntries entries = call (AddDictEntries entries)

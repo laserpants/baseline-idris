@@ -20,14 +20,12 @@ program = do
   loop
 where
   loop : Eff () [BASELINE, STDIO]
-  loop = do
-    str <- baseline "$> "
-    case str of
-         Nothing => putStrLn "Exit!"
-         Just "" => loop
-         Just s  => do
-           putStrLn ("You typed: " ++ s)
-           loop
+  loop = case !(baseline "$> ") of
+              Nothing => putStrLn "Exit!"
+              Just "" => loop
+              Just s  => do
+                putStrLn ("You typed: " ++ s)
+                loop
 
 main : IO ()
 main = run program
