@@ -4,9 +4,7 @@ This project provides FFI bindings for the [editline](https://github.com/troglob
 
 ## Preliminaries
 
-To use this library, first [build and install editline](https://github.com/troglobit/editline#build--install).
-
-Then run <kbd>make</kbd> in this project's root directory to compile the FFI object file.
+To use this library, first [build and install editline](https://github.com/troglobit/editline#build--install). Then run <kbd>make</kbd> in this project's root directory to compile the C bindings.
 
 ## Usage
 
