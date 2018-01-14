@@ -23,9 +23,9 @@ addDictEntries : Foldable t => (entries : t String) -> IO ()
 addDictEntries es = for_ es addDictEntry
 
 export
-readHistory : String -> IO ()
+readHistory : (filename : String) -> IO ()
 readHistory = foreign FFI_C "bl_read_history" (String -> IO ())
 
 export
-writeHistory : String -> IO ()
+writeHistory : (filename : String) -> IO ()
 writeHistory = foreign FFI_C "bl_write_history" (String -> IO ())
