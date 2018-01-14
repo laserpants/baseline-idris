@@ -91,13 +91,13 @@ main = run program
 
 Run the readline prompt and save input to history.
 
-#### `Baseline.addDictEntry : String -> IO ()`
-#### `Effect.Baseline.addDictEntry : String -> Eff () [BASELINE]`
+#### `addDictEntry : String -> IO ()` (`import Baseline`)
+#### `addDictEntry : String -> Eff () [BASELINE]` (`import Effect.Baseline`)
 
 Add an entry to tab completion dictionary.
 
-#### `Baseline.addDictEntries : Foldable t => t String -> IO ()`
-#### `Effect.Baseline.addDictEntries : List String -> Eff () [BASELINE]`
+#### `addDictEntries : Foldable t => t String -> IO ()` (`import Baseline`)
+#### `addDictEntries : List String -> Eff () [BASELINE]` (`import Effect.Baseline`)
 
 Add multiple entries to tab completion dictionary.
 
