@@ -15,13 +15,12 @@ loop = do
 main : IO ()
 main = do
   addDictEntries
-    [ "foo"
-    , "baz"
-    , "encore"
-    , "pasta"
-    , "crocodile"
-    , "telephone"
-    , "telegraph"
-    , "telegram"
+    [ "multidiscipline"
+    , "monocrystalline"
+    , "streamline"
+    , "waterline"
+    , "skyline"
+    , "online"
+    , "byline"
     ]
   loop
