@@ -1,9 +1,9 @@
 # baseline-idris
 
-This project provides a high-level API based on FFI bindings for the 
-[Editline](https://github.com/troglobit/editline) library, to implement basic 
-readline functionality in [Idris](https://github.com/idris-lang). Perhaps the 
-name *editline-idris* would be suitable if the API was a bit more complete. 
+This project provides a high-level API via FFI bindings for the 
+[Editline](https://github.com/troglobit/editline) library. It aims to implement
+basic readline functionality in [Idris](https://github.com/idris-lang). Perhaps 
+the name *editline-idris* would be suitable if the API was a bit more complete. 
 :stuck_out_tongue:
 
 ## Preliminaries
